@@ -3,9 +3,9 @@
   <title><![CDATA[Emitting]]></title>
   <subtitle><![CDATA[Keep calm and write code]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://emitting.github.io/"/>
+  <link href="http://v2cc.github.io/"/>
   <updated>2015-08-31T19:39:34.484Z</updated>
-  <id>http://emitting.github.io/</id>
+  <id>http://v2cc.github.io/</id>
   
   <author>
     <name><![CDATA[Steve ZHANG]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Model thinking 模型思维课程笔记]]></title>
-    <link href="http://emitting.github.io/2015/08/20/2015-08-20-course-notes-of-model-thinking/"/>
-    <id>http://emitting.github.io/2015/08/20/2015-08-20-course-notes-of-model-thinking/</id>
+    <link href="http://v2cc.github.io/2015/08/20/course-notes-of-model-thinking/"/>
+    <id>http://v2cc.github.io/2015/08/20/course-notes-of-model-thinking/</id>
     <published>2015-08-20T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.484Z</updated>
     <content type="html"><![CDATA[<p>之前一段时间一直在 Coursera 上刷课，正好赶上了招牌课程之一———— Michigan 大学的 Model Thinking。<br>把自己断断续续做的笔记整理了下，幸好最开始就是用 Markdown 格式保存在 Evernote 里，所以省了很多事。</p>
@@ -71,16 +71,16 @@
 <h]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[使用 Feedly 等 RSS 工具订阅微信公众号、微博]]></title>
-    <link href="http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/"/>
-    <id>http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/</id>
+    <link href="http://v2cc.github.io/2015/07/04/read-wechat-weibo-by-rss/"/>
+    <id>http://v2cc.github.io/2015/07/04/read-wechat-weibo-by-rss/</id>
     <published>2015-07-04T12:10:33.000Z</published>
-    <updated>2015-08-31T19:39:34.480Z</updated>
+    <updated>2015-09-01T03:26:16.140Z</updated>
     <content type="html"><![CDATA[<p>无意中看到两个工具， <strong>RSS Factory</strong> 和 <strong>WeiRSS</strong> 。可以帮助我们使用 RSS 订阅微信公众号，微博账号，知乎日报等，达到统一的阅读体验。</p>
 <h2 id="RSS_Factory">RSS Factory</h2><p>RSS Factory 是用于生成微博、微信公众号及知乎日报的 RSS 链接的 Web APP。</p>
 <blockquote>
@@ -104,14 +104,14 @@
 <h2 id="RSS_Factory">RS]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Setting up shadowsocks proxy to visit Google FB and etc.]]></title>
-    <link href="http://emitting.github.io/2015/04/20/2015-04-20-setting-up-ss-proxy/"/>
-    <id>http://emitting.github.io/2015/04/20/2015-04-20-setting-up-ss-proxy/</id>
+    <link href="http://v2cc.github.io/2015/04/20/setting-up-ss-proxy/"/>
+    <id>http://v2cc.github.io/2015/04/20/setting-up-ss-proxy/</id>
     <published>2015-04-20T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p><strong><em>(Considering the Wall’s ability to block keyword, this column will evade sensitive words and be writen in English.)</em></strong></p>
@@ -195,14 +195,14 @@ bash serverSpeederInstaller.sh
     <![CDATA[<p><strong><em>(Considering the Wall’s ability to block keyword, this column will evade sensitive words and be writen in English.)</em></str]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记）]]></title>
-    <link href="http://emitting.github.io/2014/11/10/2014-11-10-edit-evernote-with-sublime-text/"/>
-    <id>http://emitting.github.io/2014/11/10/2014-11-10-edit-evernote-with-sublime-text/</id>
+    <link href="http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/"/>
+    <id>http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/</id>
     <published>2014-11-10T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p>由于跨平台的 Evernote（印象笔记）体验实在愉悦，近期把知识管理、笔记记录的主要工具从 Onenote 切换到了 Evernote。<br>美中不足的是，原生的编辑功能对常接触代码及表格的我来说比较单薄，排版又略复杂。不过幸运的事有3件：</p>
@@ -253,14 +253,14 @@ bash serverSpeederInstaller.sh
 <p>Evernot]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu 下使用 Shadowsocks + Supervisor + Privoxy 配置稳定的客户端代理]]></title>
-    <link href="http://emitting.github.io/2014/08/09/2014-08-09-shadowsocks-to-http/"/>
-    <id>http://emitting.github.io/2014/08/09/2014-08-09-shadowsocks-to-http/</id>
+    <link href="http://v2cc.github.io/2014/08/09/shadowsocks-to-http/"/>
+    <id>http://v2cc.github.io/2014/08/09/shadowsocks-to-http/</id>
     <published>2014-08-09T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<h2 id="写在前面：">写在前面：</h2><p>因为一些众所周知的原因，国外众多优秀服务在中国访问起来总需要借助梯子的帮助。<br>最近一直在使用 Shadowsocks 作为梯子，这里简单介绍下其有点。</p>
@@ -306,14 +306,14 @@ sudo supervisorctl reload
 <li>Shadowsocks 在 Win、Ma]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[像 Geek 一样写作（一）：用 Jekyll + Github + Markdown 搭建 Blog 的介绍]]></title>
-    <link href="http://emitting.github.io/2014/07/09/2014-07-09-write-blog-like-geek-1/"/>
-    <id>http://emitting.github.io/2014/07/09/2014-07-09-write-blog-like-geek-1/</id>
+    <link href="http://v2cc.github.io/2014/07/09/write-blog-like-geek-1/"/>
+    <id>http://v2cc.github.io/2014/07/09/write-blog-like-geek-1/</id>
     <published>2014-07-09T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p>在互联网愈来开放自由的今天，通过 Blog 表达自己的声音成为越来越大众化的事情。<br>于是涌现出了琳琅满目的个人 Blog 方案，对于选择恐惧症来讲，这真是最坏的年代。<br>让我赶快摇个骰（tóu，这里突然发现原来是读 “tóu” ，文盲到鼻酸）子吧。</p>
@@ -354,14 +354,14 @@ sudo supervisorctl reload
 <p>]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[重读《挪威的森林》]]></title>
-    <link href="http://emitting.github.io/2014/07/02/2014-07-02-norwegian-wood/"/>
-    <id>http://emitting.github.io/2014/07/02/2014-07-02-norwegian-wood/</id>
+    <link href="http://v2cc.github.io/2014/07/02/norwegian-wood/"/>
+    <id>http://v2cc.github.io/2014/07/02/norwegian-wood/</id>
     <published>2014-07-02T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<h2 id="Chapter-_One">Chapter. One</h2><p>遇上晚上停电，闲得无聊，打开手机里放置很久的 <em>《挪威的森林》</em> 品读起来。</p>
@@ -379,14 +379,14 @@ sudo supervisorctl reload
 <p>关于此书的印象早已全部失却，读起来却依然惊人顺畅——5个小时，从头至尾。熄灭手机屏幕，无光]]>
     </summary>
     
-      <category term="wheels" scheme="http://emitting.github.io/categories/wheels/"/>
+      <category term="wheels" scheme="http://v2cc.github.io/categories/wheels/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu 软件精选]]></title>
-    <link href="http://emitting.github.io/2014/06/24/2014-06-24-software/"/>
-    <id>http://emitting.github.io/2014/06/24/2014-06-24-software/</id>
+    <link href="http://v2cc.github.io/2014/06/24/software/"/>
+    <id>http://v2cc.github.io/2014/06/24/software/</id>
     <published>2014-06-24T12:10:33.000Z</published>
     <updated>2015-08-31T14:58:00.000Z</updated>
     <content type="html"><![CDATA[<p>整理了下 Ubuntu 常用软件，备忘。</p>
@@ -496,14 +496,14 @@ sudo supervisorctl reload
 <li><a href="https://www.google.com/chrome/browser/desktop/" target=]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何优雅的使用 Ubuntu 14.04 LTS]]></title>
-    <link href="http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/"/>
-    <id>http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/</id>
+    <link href="http://v2cc.github.io/2014/06/23/diy-ubuntu/"/>
+    <id>http://v2cc.github.io/2014/06/23/diy-ubuntu/</id>
     <published>2014-06-23T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p>大概在 2010 年，我首次接触到 Ubuntu 和 Fedora，尽管因为图形界面、交互等种种原因很快不了了之，但是我对的 Fedora 抱了非常大的期待。记忆小键盘锁定状态等一些在 Windows 上习以为常的细节，只有 Fedora 作了比较好的支持。</p>
@@ -618,14 +618,14 @@ sudo supervisorctl reload
 <p>]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何优雅的使用Google Fonts API]]></title>
-    <link href="http://emitting.github.io/2014/06/22/2014-06-22-google-fonts-api/"/>
-    <id>http://emitting.github.io/2014/06/22/2014-06-22-google-fonts-api/</id>
+    <link href="http://v2cc.github.io/2014/06/22/google-fonts-api/"/>
+    <id>http://v2cc.github.io/2014/06/22/google-fonts-api/</id>
     <published>2014-06-22T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p>在介绍优雅地使用方法之前，简单提下 Google Fonts API 使用背景，算是对自己刚入门的知识做个总结把。</p>
@@ -663,14 +663,14 @@ sudo supervisorctl reload
 <h3 id="关于_Google_Fonts_API">关于 Google Fonts API</h3><p>大部分中文网页都有这样一个字体表：</]]>
     </summary>
     
-      <category term="tools" scheme="http://emitting.github.io/categories/tools/"/>
+      <category term="tools" scheme="http://v2cc.github.io/categories/tools/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Writing]]></title>
-    <link href="http://emitting.github.io/2014/06/20/2014-06-20-on-writing/"/>
-    <id>http://emitting.github.io/2014/06/20/2014-06-20-on-writing/</id>
+    <link href="http://v2cc.github.io/2014/06/20/on-writing/"/>
+    <id>http://v2cc.github.io/2014/06/20/on-writing/</id>
     <published>2014-06-20T12:10:33.000Z</published>
     <updated>2015-08-31T19:39:34.480Z</updated>
     <content type="html"><![CDATA[<p>这是 emitting 的第一天。该做个介绍。</p>
@@ -684,7 +684,7 @@ sudo supervisorctl reload
 <p>建立这个 Blog 的起因，是最近刚把笔记本系统迁移到 Ubuntu 上，查了非常多的资料，也试了很多知识管理软件。<br>记着记着突然想到，是不是可以把自己的经验分享出来。甚至不止经验，为什么不对生活也做些记录]]>
     </summary>
     
-      <category term="wheels" scheme="http://emitting.github.io/categories/wheels/"/>
+      <category term="wheels" scheme="http://v2cc.github.io/categories/wheels/"/>
     
   </entry>
   

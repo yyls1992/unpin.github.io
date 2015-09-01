@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Emitting">
-    <title>使用 Feedly 等 RSS 工具订阅微信公众号、微博 - Emitting</title>
+    <title>Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记） - Emitting</title>
     <meta name="author" content="Steve ZHANG">
     
         <link rel="icon" href="/assets/images/favicon-32x32.png">
@@ -14,37 +14,25 @@
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="无意中看到两个工具， RSS Factory 和 WeiRSS 。可以帮助我们使用 RSS 订阅微信公众号，微博账号，知乎日报等，达到统一的阅读体验。
-RSS FactoryRSS Factory 是用于生成微博、微信公众号及知乎日报的 RSS 链接的 Web APP。
-
-Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
+    <meta name="description" content="由于跨平台的 Evernote（印象笔记）体验实在愉悦，近期把知识管理、笔记记录的主要工具从 Onenote 切换到了 Evernote。美中不足的是，原生的编辑功能对常接触代码及表格的我来说比较单薄，排版又略复杂。不过幸运的事有3件：
+Evernote（印象笔记）提供了 API，供第三方应用管理笔记。这世界上有 markdown 这样舒服的标记语言。美妙的 IDE —— Sublime Text">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="使用 Feedly 等 RSS 工具订阅微信公众号、微博">
-<meta property="og:url" content="http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/index.html">
+<meta property="og:title" content="Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记）">
+<meta property="og:url" content="http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/index.html">
 <meta property="og:site_name" content="Emitting">
-<meta property="og:description" content="无意中看到两个工具， RSS Factory 和 WeiRSS 。可以帮助我们使用 RSS 订阅微信公众号，微博账号，知乎日报等，达到统一的阅读体验。
-RSS FactoryRSS Factory 是用于生成微博、微信公众号及知乎日报的 RSS 链接的 Web APP。
-
-Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
-<meta property="og:image" content="http://emitting.github.io/rss_s1.png">
-<meta property="og:image" content="http://emitting.github.io/rss_s2.png">
-<meta property="og:image" content="http://emitting.github.io/rss_s3.png">
+<meta property="og:description" content="由于跨平台的 Evernote（印象笔记）体验实在愉悦，近期把知识管理、笔记记录的主要工具从 Onenote 切换到了 Evernote。美中不足的是，原生的编辑功能对常接触代码及表格的我来说比较单薄，排版又略复杂。不过幸运的事有3件：
+Evernote（印象笔记）提供了 API，供第三方应用管理笔记。这世界上有 markdown 这样舒服的标记语言。美妙的 IDE —— Sublime Text">
 <meta property="og:updated_time" content="2015-08-31T19:39:34.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Feedly 等 RSS 工具订阅微信公众号、微博">
-<meta name="twitter:description" content="无意中看到两个工具， RSS Factory 和 WeiRSS 。可以帮助我们使用 RSS 订阅微信公众号，微博账号，知乎日报等，达到统一的阅读体验。
-RSS FactoryRSS Factory 是用于生成微博、微信公众号及知乎日报的 RSS 链接的 Web APP。
-
-Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
+<meta name="twitter:title" content="Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记）">
+<meta name="twitter:description" content="由于跨平台的 Evernote（印象笔记）体验实在愉悦，近期把知识管理、笔记记录的主要工具从 Onenote 切换到了 Evernote。美中不足的是，原生的编辑功能对常接触代码及表格的我来说比较单薄，排版又略复杂。不过幸运的事有3件：
+Evernote（印象笔记）提供了 API，供第三方应用管理笔记。这世界上有 markdown 这样舒服的标记语言。美妙的 IDE —— Sublime Text">
     
     
     
         <meta property="og:image" content="/assets/images/orange_logo.png"/>
     
     
-    
-        <meta property="og:image" content="/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/feedly.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/feedly.jpg" />
     
     
     <!--STYLES-->
@@ -188,17 +176,9 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
 </nav>
 
             
-        <div class="post-header-cover
-                    text-left
-                    "
-             style="background-image:url('/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/feedly.jpg');"
-             data-behavior="3">
-            
-        </div>
-
             <div id="main" data-behavior="3"
-                 class="hasCover
-                        hasCoverMetaOut
+                 class="
+                        hasCoverMetaIn
                         ">
                 
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
@@ -207,13 +187,13 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            使用 Feedly 等 RSS 工具订阅微信公众号、微博
+            Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记）
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Sat Jul 04 2015 20:10:33 GMT+0800">
+    <time itemprop="datePublished" content="Mon Nov 10 2014 20:10:33 GMT+0800">
 	
-		    7月 04, 2015
+		    11月 10, 2014
     	
     </time>
     
@@ -228,23 +208,48 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>无意中看到两个工具， <strong>RSS Factory</strong> 和 <strong>WeiRSS</strong> 。可以帮助我们使用 RSS 订阅微信公众号，微博账号，知乎日报等，达到统一的阅读体验。</p>
-<h2 id="RSS_Factory">RSS Factory</h2><p>RSS Factory 是用于生成微博、微信公众号及知乎日报的 RSS 链接的 Web APP。</p>
-<blockquote>
-<p>Author: Timmy Chu<br>Website: <a href="https://diy-devz.rhcloud.com/" target="_blank" rel="external">diy-devz.rhcloud.com</a><br>Github: <a href="https://github.com/zhu327/rss" target="_blank" rel="external">zhu327/rss</a></p>
-</blockquote>
-<h3 id="S1-_查找微信公众号">S1. 查找微信公众号</h3><p>搜狗提供了微信公众号搜索服务，我们这里要用到它。<br>打开网站 <a href="http://weixin.sogou.com/" target="_blank" rel="external">weixin.sogou.com</a> ，搜索需要订阅的公众号。</p>
-<p><img src="rss_s1.png" alt=""></p>
-<h3 id="S2-_获取_Open_ID">S2. 获取 Open ID</h3><p>搜索结果的网址中，提取 <code>openid=</code> 之后的字段</p>
-<p><img src="rss_s2.png" alt=""></p>
-<h3 id="S3-_Feedly_订阅_RSS_链接">S3. Feedly 订阅 RSS 链接</h3><p>使用上一步获得的 Open ID ，在 RSS Factory 中生成订阅链接</p>
-<p><img src="rss_s3.png" alt=""></p>
-<p>最后，使用 Feedly 等 RSS 工具订阅此链接即可。<br>订阅微博账号同样比较简单， RSS Factory 有现成的教程，有兴趣可以查看。</p>
-<p>由于作者开源了 RSS Factory 的源码，我们何以使用自己的服务器搭建该工具，教程及源码参看前文提供的 Github 地址。</p>
-<h2 id="WeiRSS">WeiRSS</h2><p>第二个工具是 WeiRSS，只能用于生成微信公众号 RSS 链接。但是其网站上推荐了依一些热门订阅的公众号，还是比较实用的。</p>
-<blockquote>
-<p>Author: Berry &amp;&amp; TaoAlpha<br>Website: <a href="http://weirss.me/" target="_blank" rel="external">weirss.me</a><br>Github: <a href="https://github.com/iberryful/weixin_sogou" target="_blank" rel="external">iberryful/weixin_sogou</a></p>
-</blockquote>
+            <p>由于跨平台的 Evernote（印象笔记）体验实在愉悦，近期把知识管理、笔记记录的主要工具从 Onenote 切换到了 Evernote。<br>美中不足的是，原生的编辑功能对常接触代码及表格的我来说比较单薄，排版又略复杂。不过幸运的事有3件：</p>
+<p>Evernote（印象笔记）提供了 API，供第三方应用管理笔记。<br>这世界上有 markdown 这样舒服的标记语言。<br>美妙的 IDE —— Sublime Text</p>
+<p>得益于上述三件幸运的事，使得我们可以十分方便的在 Sublime Text 中，利用 markdown 格式编辑修改 Evernote（印象笔记）中的笔记。</p>
+<hr>
+<h2 id="安装_Sublime_Text_3">安装 Sublime Text 3</h2><p>Sublime Text 3 是一款共享性质的编辑器，比记事本强大、美观，又比常规 IDE 轻巧、灵活。同时针对个人非商业用途的用户免费，请自行前往<a href="http://www.sublimetext.com/3" target="_blank" rel="external">官网下载</a> Sublime Text 3。</p>
+<p>注意，Evernote 插件只支持 Sublime Text 3，所以请不要下载成 Sublime Text 2.</p>
+<p>安装好 Sublime Text 3 后需要为其添加插件管理功能 Package Control。</p>
+<p><strong>自动安装：</strong></p>
+<ol>
+<li>通过快捷键 <code>ctrl+`` 或者</code>View &gt; Show Console` 菜单打开控制台  </li>
+<li>粘贴以下代码后回车</li>
+</ol>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">import</span> urllib.request,os,hashlib; h = '<span class="number">7183</span>a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path<span class="params">()</span>; urllib.request.install_opener<span class="params">( urllib.request.build_opener<span class="params">( urllib.request.ProxyHandler<span class="params">()</span>)</span> )</span>; by = urllib.request.urlopen<span class="params">( 'http://packagecontrol.io/' + pf.replace<span class="params">(' ', '%<span class="number">20</span>')</span>)</span>.read<span class="params">()</span>; dh = hashlib.sha256<span class="params">(by)</span>.hexdigest<span class="params">()</span>; print<span class="params">('Error validating download <span class="params">(got %s instead of %s)</span>, please try manual install' % <span class="params">(dh, h)</span>)</span> <span class="keyword">if</span> dh <span class="built_in">!</span>= h <span class="keyword">else</span> open<span class="params">(os.path.join<span class="params">( ipp, pf)</span>, 'wb' )</span>.write<span class="params">(by)</span></span><br></pre></td></tr></table></figure>
+<p><strong>手动安装：</strong></p>
+<ol>
+<li>点击 <code>Preferences &gt; Browse Packages…</code> 菜单  </li>
+<li>进入 <code>Installed Packages/</code> 目录  </li>
+<li>下载 <a href="https://sublime.wbond.net/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>，并复制文件到 <code>Installed Packages/</code> 目录  </li>
+<li>重启 Sublime Text</li>
+</ol>
+<h2 id="安装_Evernote_插件">安装 Evernote 插件</h2><p>打开 Sublime Text 后，<code>cmd + shift + P</code> 打开 Package Control，输入 <code>install</code>，跳出插件库，然后输入 <code>Evernote</code>  安装 Evernote 插件。该插件的介绍和详细的使用说明请参考：<a href="https://sublime.wbond.net/packages/Evernote" target="_blank" rel="external">插件介绍</a>。</p>
+<p>插件安装完成之后，第一次使用时需要进行授权认证。步骤如下：</p>
+<ol>
+<li>打开 Package Control，输入 <code>send to evernote</code>，在窗口底部会弹出一个小窗口，窗口中的内容为一个带 token 的链接。该 token 后面用到。  </li>
+<li>Evernote 国际版用户，将链接复制到浏览器并访问，登录授权后，会有一个 NoteStore URL。<br>印象笔记用户，直接用浏览器访问链接：<a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="external">https://app.yinxiang.com/api/DeveloperToken.action</a>，进行登陆授权，并记录 token 和 NoteStore URL。  </li>
+<li>打开 Sublime Text，打开 <code>Preferences &gt; Package Settings &gt; Evernote &gt; Settings User</code>，将上步骤中的 token 和 NoteStore URL 复制到对应位置。参照格式如下：</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">noteStoreUrl</span>": <span class="value"><span class="string">"这里填入你的 NoteStore URL"</span></span>,</span><br><span class="line">	"<span class="attribute">token</span>": <span class="value"><span class="string">"这里填入你的 token"</span></span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好了，Sublime Text 已经可以访问你的 Evernote 笔记了。</p>
+<h2 id="编辑方法">编辑方法</h2><p><code>cmd + shift + P</code> 打开 Package Control，输入 <code>evernote</code>，就能看到所有功能选项了，这里介绍几个比较常用的选项功能。</p>
+<p><strong>Evernote: New empty note</strong></p>
+<p>新建一个笔记。点选后弹出选单可以选择在哪个笔记本下建立笔记。</p>
+<p><strong>Evernote: Open Evernote note</strong></p>
+<p>打开一个已存在的笔记。点选后弹出菜单可以选择打开任何已存在笔记。</p>
+<p><strong>Evernote: Update Evernote note</strong></p>
+<p>更新当前编辑的笔记到 Evernote。</p>
+<p>更多功能请大家自行发掘。</p>
+<h2 id="Markdown_扩展">Markdown 扩展</h2><p>支持 Evernote 的待办事项，格式如下：</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> [ ] <span class="constant">Unchecked</span></span><br><span class="line"></span>-<span class="ruby"> [x] <span class="constant">Checked</span></span></span><br></pre></td></tr></table></figure>
+<p>支持表格，但需在 <code>Settings – User</code> 中加入配置 <code>&quot;wiki_tables&quot;: &quot;true&quot;</code>。格式如下：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">||<span class="string"> *Year* </span>||<span class="string"> *Temperature (low)* </span>||<span class="string"> *Temperature (high)* </span>||</span><br><span class="line">||<span class="string"> 1900 </span>||<span class="string"> -10 </span>||<span class="string"> 25 </span>||</span><br><span class="line">||<span class="string"> 1910 </span>||<span class="string"> -15 </span>||<span class="string"> 30 </span>||</span><br></pre></td></tr></table></figure>
+<p>更多信息参考官方文档 <a href="https://github.com/bordaigorl/sublime-evernote/wiki/Supported-Markdown" target="_blank" rel="external">Supported-Markdown</a>。</p>
 
             
                 
@@ -259,7 +264,7 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/08/20/2015-08-20-course-notes-of-model-thinking/"  data-tooltip="Model thinking 模型思维课程笔记">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/04/20/setting-up-ss-proxy/"  data-tooltip="Setting up shadowsocks proxy to visit Google FB and etc.">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一页</span>
@@ -267,7 +272,7 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/04/20/2015-04-20-setting-up-ss-proxy/" data-tooltip="Setting up shadowsocks proxy to visit Google FB and etc.">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/08/09/shadowsocks-to-http/" data-tooltip="Ubuntu 下使用 Shadowsocks + Supervisor + Privoxy 配置稳定的客户端代理">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一页</span>
                     <i class="fa fa-angle-right"></i>
@@ -282,17 +287,17 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -338,7 +343,7 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/08/20/2015-08-20-course-notes-of-model-thinking/"  data-tooltip="Model thinking 模型思维课程笔记">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/04/20/setting-up-ss-proxy/"  data-tooltip="Setting up shadowsocks proxy to visit Google FB and etc.">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一页</span>
@@ -346,7 +351,7 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/04/20/2015-04-20-setting-up-ss-proxy/" data-tooltip="Setting up shadowsocks proxy to visit Google FB and etc.">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/08/09/shadowsocks-to-http/" data-tooltip="Ubuntu 下使用 Shadowsocks + Supervisor + Privoxy 配置稳定的客户端代理">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一页</span>
                     <i class="fa fa-angle-right"></i>
@@ -361,17 +366,17 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -397,17 +402,17 @@ Author: Timmy ChuWebsite: diy-devz.rhcloud.comGithub: zhu327/rs">
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2015/07/04/2015-07-04-read-wechat-weibo-by-rss/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://v2cc.github.io/2014/11/10/edit-evernote-with-sublime-text/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
