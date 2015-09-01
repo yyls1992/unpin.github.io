@@ -1,29 +1,31 @@
 language: node_js
+
 node_js:
 - '0.12'
+
 branches:
   only:
   - blog
+
 before_install: 
-install:
-- npm install -g hexo
-- npm install
-before_script:
-- git config --global user.name 'Steve ZHANG'
-- git config --global user.email 'stevzhg@gmail.com'
-script:
-- hexo generate
-after_success:
-- mkdir .deploy
-- cd .deploy
-- git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init
-  && git remote add -t gh-pages origin $DEPLOY_REPO)
-- rm -rf ./*
-- cp -r ../public/* .
-- git add -A .
-- git commit -m 'Site updated'
-- git branch -m gh-pages
-- git push -q -u origin gh-pages
-dd:
 - openssl aes-256-cbc -K $encrypted_a33f091765f3_key -iv $encrypted_a33f091765f3_iv
-  -in id_rsa.enc -out id_rsa -d
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp ssh_config ~/.ssh/config
+- git config --global user.name "Steve ZHANG"
+- git config --global user.email stevzhg@gmail.com
+- git clone -b blog git@github.com:v2cc/v2cc.github.io.git .deploy_git
+
+install:
+- npm install hexo-cli -g
+- npm install
+- npm install hexo-generator-feed --save
+- npm install hexo-generator-sitemap --save
+- npm install hexo-deployer-git --save
+
+script:
+- hexo clean
+- hexo g
+- hexo d
