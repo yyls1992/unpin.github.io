@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Emitting">
+    <title>如何优雅的使用 Ubuntu 14.04 LTS - Emitting</title>
+    <meta name="author" content="Steve ZHANG">
+    
+        <link rel="icon" href="/assets/images/favicon-32x32.png">
+    
+    
+        <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="大概在 2010 年，我首次接触到 Ubuntu 和 Fedora，尽管因为图形界面、交互等种种原因很快不了了之，但是我对的 Fedora 抱了非常大的期待。记忆小键盘锁定状态等一些在 Windows 上习以为常的细节，只有 Fedora 作了比较好的支持。
+最近实在不堪忍受 Windows 上配置 Ruby 等开发环境的繁琐，打算迁移到 Linux 上来，反正 Dota2 for Linux 已">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="如何优雅的使用 Ubuntu 14.04 LTS">
+<meta property="og:url" content="http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/index.html">
+<meta property="og:site_name" content="Emitting">
+<meta property="og:description" content="大概在 2010 年，我首次接触到 Ubuntu 和 Fedora，尽管因为图形界面、交互等种种原因很快不了了之，但是我对的 Fedora 抱了非常大的期待。记忆小键盘锁定状态等一些在 Windows 上习以为常的细节，只有 Fedora 作了比较好的支持。
+最近实在不堪忍受 Windows 上配置 Ruby 等开发环境的繁琐，打算迁移到 Linux 上来，反正 Dota2 for Linux 已">
+<meta property="og:updated_time" content="2015-08-31T19:39:34.480Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何优雅的使用 Ubuntu 14.04 LTS">
+<meta name="twitter:description" content="大概在 2010 年，我首次接触到 Ubuntu 和 Fedora，尽管因为图形界面、交互等种种原因很快不了了之，但是我对的 Fedora 抱了非常大的期待。记忆小键盘锁定状态等一些在 Windows 上习以为常的细节，只有 Fedora 作了比较好的支持。
+最近实在不堪忍受 Windows 上配置 Ruby 等开发环境的繁琐，打算迁移到 Linux 上来，反正 Dota2 for Linux 已">
+    
+    
+    
+        <meta property="og:image" content="/assets/images/orange_logo.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style.min.css" type="text/css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-62121389-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+    <body>
+        <div id="blog">
+            <header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Emitting</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="/#search">
+        
+                <i class="fa fa-lg fa-search"></i>
+            </a>
+    
+</header>
+            <nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                
+                    <img class="sidebar-profile-picture" src="/assets/images/orange_logo.png"/>
+                
+            </a>
+            <span class="sidebar-profile-name">Steve ZHANG</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">主页</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">分类</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">标签</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">归档</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">关于</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/emitting" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            如何优雅的使用 Ubuntu 14.04 LTS
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Mon Jun 23 2014 20:10:33 GMT+0800">
+	
+		    6月 23, 2014
+    	
+    </time>
+    
+        <span>分类 </span>
+        
+    <a class="category-link" href="/categories/tools/">tools</a>
+
+
+    
+</div>
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>大概在 2010 年，我首次接触到 Ubuntu 和 Fedora，尽管因为图形界面、交互等种种原因很快不了了之，但是我对的 Fedora 抱了非常大的期待。记忆小键盘锁定状态等一些在 Windows 上习以为常的细节，只有 Fedora 作了比较好的支持。</p>
+<p>最近实在不堪忍受 Windows 上配置 Ruby 等开发环境的繁琐，打算迁移到 Linux 上来，反正 Dota2 for Linux 已经发布，哈。</p>
+<p>经历大约半个月的摇摆期，最终确定 Ubuntu 为目标系统。期间折腾过 Fedora, OpenSUSE, Linux Mint 等几个发行版本，感觉 Fedora 改进缓慢，OpenSUSE 软件源不够丰富，Linux Mint 太像 Windows 审美疲劳。</p>
+<p>期间出现操作失误导致硬盘全格一次，幸好有备份重要数据到网盘的习惯。不过突然发现 Dropbox 连不上是闹哪样啊，同步自己数据还得翻墙？支持国货也不是这样搞的吧，幸好翻墙技能早已 get。</p>
+<p>把这段时间使用下来，能提升自己体验的一些 Ubuntu 14.04 LTS 优化方案整理分享，希望对大家有所帮助。</p>
+<h2 id="优化列表目录">优化列表目录</h2><ul>
+<li><p><a href="#解决 Ubuntu 屏幕亮度参数不能保存">解决 Ubuntu 屏幕亮度参数不能保存</a></p>
+</li>
+<li><p><a href="#消除单系统下引导 Ubuntu 时黑色屏幕出现的紫色边框">消除单系统下引导 Ubuntu 时黑色屏幕出现的紫色边框</a></p>
+</li>
+<li><p><a href="#解决启动中出现 INFO @wl_cfg80211_attach : Registered CFG80211 phy 影响美观的问题">解决启动中出现 INFO @wl_cfg80211_attach : Registered CFG80211 phy 影响美观的问题</a></p>
+</li>
+<li><p><a href="#Ubuntu 14.04 LTS 英文环境下系统及 Chrome 中字体美化">Ubuntu 14.04 LTS 英文环境下系统及 Chrome 中字体美化</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="解决_Ubuntu_屏幕亮度参数不能保存">解决 Ubuntu 屏幕亮度参数不能保存</h2><p>这里不得不吐槽下，我在 10 年初次接触 Ubuntu 就遇到过这个问题，过了 4 年居然还没有得到修复，搜索一下这个问题有接近 6w 的帖子。而红帽系的 Fedora 上这个问题早就解决了…</p>
+<p>好了赶快进入正题。</p>
+<p>每次登陆 Ubuntu 14.04 LTS 系统时屏幕亮度都为最高，网上能搜索到的几种解决方法要么太复杂要么无效。自己经过尝试提供一种比较好的解决方案。</p>
+<p>AMD 显卡的 Ubuntu 14.04 LTS 的亮度设置保存在 <code>/sys/class/backlight/acpi_video0/brightness</code>。每次登陆系统时这个文件都会被重置为最大值，所以直接更改这个文件的值是没用的。</p>
+<p>可以用以下两个步骤来让系统启动后自动设置屏幕的亮度值：</p>
+<p>第一步，更改 <code>rc.local</code> 文件使系统在启动时自动更改 <code>/sys/class/backlight/acpi_video0/brightness</code> 文件权限。</p>
+<p>在终端输入</p>
+<pre><code>sudo gedit /etc/rc.<span class="keyword">local</span>
+</code></pre><p>如果询问密码的话，输入你安装系统时设置的密码</p>
+<p>打开后你会看到如下内容：</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#!/bin/sh -e</span></span><br><span class="line"><span class="preprocessor">#</span></span><br><span class="line"><span class="preprocessor"># rc.local</span></span><br><span class="line"><span class="preprocessor">#</span></span><br><span class="line"><span class="preprocessor"># This script is executed at the end of each multiuser runlevel.</span></span><br><span class="line"><span class="preprocessor"># Make sure that the script will “exit 0″ on success or any other</span></span><br><span class="line"><span class="preprocessor"># value on error.</span></span><br><span class="line"><span class="preprocessor">#</span></span><br><span class="line"><span class="preprocessor"># In order to enable or disable this script just change the execution</span></span><br><span class="line"><span class="preprocessor"># bits.</span></span><br><span class="line"><span class="preprocessor">#</span></span><br><span class="line"><span class="preprocessor"># By default this script does nothing.</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#exit 0</span></span><br></pre></td></tr></table></figure>
+<p>插入这句话到代码中：</p>
+<pre><code>chmod a+w <span class="regexp">/sys/</span><span class="keyword">class</span><span class="regexp">/backlight/</span>acpi_video0<span class="regexp">/brightness</span>
+</code></pre><p>保证修改后代码如下（注意如果 <code>exit</code> 前有 <code>#</code> 请删除）：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh -e</span><br><span class="line">#</span><br><span class="line"># rc.local</span><br><span class="line">#</span><br><span class="line"># This script is executed at the <span class="operator"><span class="keyword">end</span> <span class="keyword">of</span> <span class="keyword">each</span> multiuser runlevel.</span><br><span class="line"># Make sure that the script will “<span class="keyword">exit</span> <span class="number">0</span>″ <span class="keyword">on</span> <span class="keyword">success</span> <span class="keyword">or</span> <span class="keyword">any</span> other</span><br><span class="line"># <span class="keyword">value</span> <span class="keyword">on</span> <span class="keyword">error</span>.</span><br><span class="line">#</span><br><span class="line"># <span class="keyword">In</span> <span class="keyword">order</span> <span class="keyword">to</span> <span class="keyword">enable</span> <span class="keyword">or</span> <span class="keyword">disable</span> this script just <span class="keyword">change</span> the execution</span><br><span class="line"># bits.</span><br><span class="line">#</span><br><span class="line"># <span class="keyword">By</span> <span class="keyword">default</span> this script does <span class="keyword">nothing</span>.</span><br><span class="line">chmod a+w /<span class="keyword">sys</span>/<span class="keyword">class</span>/backlight/acpi_video0/brightness</span><br><span class="line"><span class="keyword">exit</span> <span class="number">0</span></span></span><br></pre></td></tr></table></figure>
+<p>保存退出。</p>
+<p>第二步，更改 <code>.profile</code> 文件使系统在用户登录时自动更改 birghtness 的值</p>
+<p>进入主文件夹，点击 “查看”，点击 “显示隐藏文件”。找到 <code>.profile</code> 文件，双击打开。</p>
+<p>在 <code>.profile</code> 最后一行添加</p>
+<pre><code>echo <span class="number">7</span> &gt; <span class="regexp">/sys/</span><span class="keyword">class</span><span class="regexp">/backlight/</span>acpi_video0<span class="regexp">/brightness</span>
+</code></pre><p><strong>其中数字7为你设定的屏幕亮度值，最大值不同硬件为不同值，可自行尝试。</strong></p>
+<p>保存退出。</p>
+<p>这样每次进入系统后屏幕的亮度都会自动设置为 <code>.profile</code> 文件中设定的值。此方法的好处是配置保存在个人配置文件里，修改起来非常方便。而且无论睡眠唤醒，还是注销重登陆，亮度设置都能生效。</p>
+<hr>
+<h2 id="除去_Ubuntu_系统引导时黑色屏幕出现的紫色边框">除去 Ubuntu 系统引导时黑色屏幕出现的紫色边框</h2><p>作为一名出色的强迫症患者，有问题要解决，没有碍问题要创造问题来解决。</p>
+<p>所以这个启动是紫框和下面一个出现黑字，纯属没事找事。只是自己看到 Ubuntu 启动时不能像 Windows 一样纯粹，就感觉天崩地裂无法接受。扯远了，这个问题主要有两个方案：</p>
+<ol>
+<li>更换 grub 主题或背景色</li>
+<li>命令修改 grub 参数</li>
+</ol>
+<p><strong>方案1：</strong></p>
+<p>ubuntu开机紫色背景有两个阶段：Grub、Plymouth，我们这里需要修改 Grub 阶段，简单点就是把紫色改为黑色即可。改动这个文件 <code>ubuntu-logo.grub</code> 。</p>
+<pre><code>sudo gedit <span class="regexp">/lib/</span>plymouth<span class="regexp">/themes/u</span>buntu-logo<span class="regexp">/ubuntu-logo.grub</span>
+</code></pre><p>修改配色参数。</p>
+<pre><code>sudo gedit <span class="regexp">/lib/</span>plymouth<span class="regexp">/themes/u</span>buntu-logo<span class="regexp">/ubuntu-logo.grub</span>
+</code></pre><p>修改背景色参数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#原来的紫色</span></span><br><span class="line"><span class="keyword">if</span> background_color <span class="number">44</span>,<span class="number">0</span>,<span class="number">30</span>; then</span><br><span class="line">  clear</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#改成黑色</span></span><br><span class="line"><span class="keyword">if</span> background_color <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>; then</span><br><span class="line"> 	  clear</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>保存后终端执行</p>
+<pre><code><span class="title">sudo</span> update-grub
+</code></pre><p>至于更换 grub 主题，比较适合比我这种强迫症还 zuo 的同学采用，具体方法自行 Google。</p>
+<p><strong>方案2：</strong></p>
+<p>如果觉得系统默认的紫色还是挺好看，不想更换，就要用到第二种方法。</p>
+<p>Ubuntu 官方的 Bug 专区里给出了临时解决方案。但这个方案可能导致引导时过快跳过 grub 菜单，不过因为我是单系统，所以它对我来说不是一个问题。具体讨论可以参看 <a href="https://bugs.launchpad.net/ubuntu/+source/plymouth/+bug/1289809" target="_blank" rel="external">Grub theme: black screen with purple border</a></p>
+<p>临时解决方案如下：</p>
+<p>在终端输入</p>
+<pre><code>sudo gedit <span class="regexp">/lib/</span>plymouth<span class="regexp">/themes/u</span>buntu-logo<span class="regexp">/ubuntu-logo.grub</span>
+</code></pre><p>找到这句话 </p>
+<pre><code><span class="keyword">if</span> background_color <span class="number">44</span>,<span class="number">0</span>,<span class="number">30</span>; then clear fi 
+</code></pre><p>在 <code>if</code> 后面添加一个 <code>!</code> ，改动后为</p>
+<pre><code><span class="keyword">if</span> ！ background_color <span class="number">44</span>,<span class="number">0</span>,<span class="number">30</span>; then clear fi`
+</code></pre><p>保存后终端执行</p>
+<pre><code><span class="title">sudo</span> update-grub
+</code></pre><hr>
+<h2 id="解决启动中出现_INFO_@wl_cfg80211_attach_:_Registered_CFG80211_phy_影响美观的问题">解决启动中出现 INFO @wl_cfg80211_attach : Registered CFG80211 phy 影响美观的问题</h2><p>此问题的解决方案同样出自 Ubuntu 官方 Bug 专区，步骤如下：</p>
+<p>在终端中执行</p>
+<pre><code>sudo gedit <span class="regexp">/etc/i</span>nitramfs-tools<span class="regexp">/conf.d/</span>splash
+</code></pre><p>添加这句话</p>
+<pre><code><span class="attribute">FRAMEBUFFER</span>=<span class="string">y</span>
+</code></pre><p>保存后终端执行</p>
+<pre><code>sudo <span class="keyword">update</span>-initramfs -<span class="keyword">u</span>
+</code></pre><p><em>注意，此解决方案提供者说可能会轻微影响启动速度。</em></p>
+<p>自己测试下来会增加 1-2 秒的开机时间，但是开机过程完美了有没有，强迫症得到了解脱！</p>
+<p>具体讨论参看<a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1160322" target="_blank" rel="external">[ 21.125934] INFO @wl_cfg80211_attach : Registered CFG80211 phy</a></p>
+<hr>
+<h2 id="Ubuntu_14-04_LTS_英文环境下系统及_Chrome_中字体美化">Ubuntu 14.04 LTS 英文环境下系统及 Chrome 中字体美化</h2><p>我习惯使用英文界面，但是又希望看见漂亮的中文字体。但是在這一版更新完语言配置之后却会得到一个预设字体是 <code>标楷体</code> 以及 <code>细明体</code> 的中文显示…</p>
+<p>感觉上来说，Ubuntu 的英文字体渲染甚至比 Win8 上还要漂亮。但是中文字体我真的不能忍，字体之难看，而且 Chrome 网页字体还严重发虚!以至于我把眼镜摘戴数次才确认，不是自己眼睛出了毛病。</p>
+<p>赶快开始动手解决。因为个人比较喜欢看文泉驿微米黑，所以决定用其替换系统默认的中文字体。 Ubuntu 14.04 LTS 默认不包含文泉驿微米黑字体，我们首先来安装。终端输入</p>
+<pre><code>sudo apt-<span class="keyword">get</span> install ttf-wqy-microhei
+</code></pre><p>然后把终端的路径指向 <code>/etc/fonts/conf.d</code>，这个路径下保存的就是字体配置文件的软连接。</p>
+<pre><code><span class="keyword">cd</span> /etc/fonts/<span class="keyword">conf</span>.<span class="literal">d</span>
+</code></pre><p><strong>修改設定檔 <code>65-nonlatin.conf</code> </strong></p>
+<p>先修改非拉丁字体的配置文件，加上文泉驿微米黑的设定。</p>
+<pre><code>sudo gedit <span class="number">65</span>-nonlatin.conf
+</code></pre><p>将 <code>&lt;family&gt;WenQuanYi Micro Hei&lt;/family&gt;</code> 加在 <code>sans-serif</code> 区域里。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">family</span>&gt;</span>sans-serif<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">prefer</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>WenQuanYi Micro Hei<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>Nachlieli<span class="tag">&lt;/<span class="title">family</span>&gt;</span> <span class="comment">&lt;!-- hebrew --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>Lucida Sans Unicode<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line">	......</span><br></pre></td></tr></table></figure>
+<p>将 <code>&lt;family&gt;WenQuanYi Micro Hei Mono&lt;/family&gt;</code> 则是加在 <code>monospace</code> 区域里。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">family</span>&gt;</span>monospace<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">prefer</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>WenQuanYi Micro Hei Mono<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>Miriam Mono<span class="tag">&lt;/<span class="title">family</span>&gt;</span> <span class="comment">&lt;!-- hebrew --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">family</span>&gt;</span>VL Gothic<span class="tag">&lt;/<span class="title">family</span>&gt;</span></span><br><span class="line">	......</span><br></pre></td></tr></table></figure>
+<p><strong>修改配置文件 <code>69-language-selector-zh-cn.conf</code> </strong></p>
+<p>注意，这里因为我的位置设为大陆，所以修改 <code>69-language-selector-zh-cn.conf</code>。如果处于台湾，需要修改的文件为 <code>69-language-selector-zh-tw.conf</code> 。以此类推。</p>
+<pre><code>sudo gedit <span class="number">69</span>-<span class="keyword">language</span>-selector-zh-<span class="keyword">cn</span>.<span class="keyword">conf</span>
+</code></pre><p>这里 <code>&lt;string&gt;WenQuanYi Micro Hei&lt;/string&gt;</code> 一样是加在 <code>sans-serif</code> 里。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">match</span> <span class="attribute">target</span>=<span class="value">"pattern"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">test</span> <span class="attribute">qual</span>=<span class="value">"any"</span> <span class="attribute">name</span>=<span class="value">"family"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>sans-serif<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">test</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="title">test</span> <span class="attribute">name</span>=<span class="value">"lang"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="title">string</span>&gt;</span>zh-cn<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="title">test</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">edit</span> <span class="attribute">name</span>=<span class="value">"family"</span> <span class="attribute">mode</span>=<span class="value">"prepend"</span> <span class="attribute">binding</span>=<span class="value">"strong"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>WenQuanYi Micro Hei<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>Droid Sans Fallback<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>WenQuanYi Zen Hei<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		......</span><br></pre></td></tr></table></figure>
+<p>而 <code>&lt;string&gt;WenQuanYi Micro Hei Mono&lt;/string&gt;</code> 也是加在 <code>monospace</code> 里。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">match</span> <span class="attribute">target</span>=<span class="value">"pattern"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">test</span> <span class="attribute">qual</span>=<span class="value">"any"</span> <span class="attribute">name</span>=<span class="value">"family"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>monospace<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">test</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="title">test</span> <span class="attribute">name</span>=<span class="value">"lang"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="title">string</span>&gt;</span>zh-cn<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="title">test</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">edit</span> <span class="attribute">name</span>=<span class="value">"family"</span> <span class="attribute">mode</span>=<span class="value">"prepend"</span> <span class="attribute">binding</span>=<span class="value">"strong"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>WenQuanYi Micro Hei Mono<span class="tag">&lt;/<span class="title">string</span>&gt;</span> <span class="comment">&lt;!-- add by Steve --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>Droid Sans Fallback<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>WenQuanYi Zen Hei Mono<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		......</span><br></pre></td></tr></table></figure>
+<p><strong>修改 <code>49-sansserif.conf</code> 防止 <code>Chrome</code> 的标签栏及书签栏中文变成乱码</strong></p>
+<pre><code>sudo gedit <span class="number">49</span>-sansserif.conf
+</code></pre><p>修改最后的 <code>&lt;edit name=&quot;family&quot; mode=&quot;append_last&quot;&gt;</code> 中 <code>sans-serif</code> 为 <code>WenQuanYi Micro Hei</code>。<em>注意整个文件里会看到两个 <code>sans-serif</code> ，修改后后面一个，别改错位置了。</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">edit</span> <span class="attribute">name</span>=<span class="value">"family"</span> <span class="attribute">mode</span>=<span class="value">"append_last"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- &lt;string&gt;sans-serif&lt;/string&gt; --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>WenQuanYi Micro Hei<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">edit</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>保存后终端执行 <code>sudo fc-cache -fv</code> 或是 <code>sudo fc-cache -v</code> ，新字体配置都会立即生效。</p>
+<p>Done.</p>
+
+            
+                
+
+            
+        </div>
+    </div>
+    <div class="post-footer main-content-wrap">
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/06/24/2014-06-24-software/"  data-tooltip="Ubuntu 软件精选">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一页</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/06/22/2014-06-22-google-fonts-api/" data-tooltip="如何优雅的使用Google Fonts API">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一页</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2015 Steve ZHANG. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/06/24/2014-06-24-software/"  data-tooltip="Ubuntu 软件精选">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一页</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/06/22/2014-06-22-google-fonts-api/" data-tooltip="如何优雅的使用Google Fonts API">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一页</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://emitting.github.io/2014/06/23/2014-06-23-diy-ubuntu/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+            
+        </div>
+        <div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/orange_logo.png"/>
+        
+            <h4 id="about-card-name">Steve ZHANG</h4>
+        
+            <h5 id="about-card-bio"><p>大体而言是个好人。</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>专业发呆 20 年</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Shanghai
+            </h5>
+        
+    </div>
+</div>
+
+        <div id="cover" style="background-image:url('/assets/images/background.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script.min.js" type="text/javascript"></script>
+<!--SCRIPTS END-->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'emitting';
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+
+</html>
