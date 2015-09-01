@@ -16,7 +16,7 @@ before_install:
 - cp ssh_config ~/.ssh/config
 - git config --global user.name "Steve ZHANG"
 - git config --global user.email stevzhg@gmail.com
-- git clone -b blog git@github.com:v2cc/v2cc.github.io.git .deploy_git
+- git clone -b master https://github.com/v2cc/v2cc.github.io.git .deploy_git
 
 install:
 - npm install hexo-cli -g
