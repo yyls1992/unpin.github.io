@@ -16,13 +16,11 @@ before_install:
 - cp ssh_config ~/.ssh/config
 - git config --global user.name "Steve ZHANG"
 - git config --global user.email stevzhg@gmail.com
-- git clone -b master https://github.com/v2cc/v2cc.github.io.git .deploy_git
 
 install:
 - npm install hexo-cli -g
 - npm install
 - npm install hexo-generator-feed --save
-- npm install hexo-generator-sitemap --save
 - npm install hexo-deployer-git --save
 
 script:
