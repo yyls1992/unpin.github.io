@@ -32,9 +32,10 @@ tags:
   不想手动配置的话，推荐使用在线IDE应用，例如 Cloud9. 注册账号后创建一个 gem 环境的虚拟主机即可在线操作。  
 
   在该 gem 环境下 git 到你的 Dev repo.
-
-    git clone https://github.com/username/username.github.io.git
-    git checkout blog
+  ```bash
+  git clone https://github.com/username/username.github.io.git
+  git checkout blog
+  ```
 
   将上一步得到的 `id_rsa` 复制到 Dev repo 根目录下。  
   创建 `.travis.yml` 的文件，内容为空即可。
