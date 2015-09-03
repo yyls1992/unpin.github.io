@@ -1,6 +1,7 @@
 ---
 title: 探索工作流：Travis CI 自动化构建 Hexo (一)
 date: 2015-09-02 12:43:00
+updated: 2015-09-03 12:58:00
 categories:
 - flow
 tags:
@@ -42,11 +43,11 @@ Travis CI 自动构建 Hexo 的工作流的构思是：
 1. User - push -> Dev repo  
   事先在 Github 上建立好 repository 即可。有两种方案可供参考：
 
-  * 建立 `username.gitgub.io` 源，并开设 `blog` 分支，将此分支作为 Dev repo. 而 `master` 分支就是 Pages repo. 这样的好处是只用维护一个 repository.
-  * 另一种方案，建立两个 repositories, 一个作为 Dev repo, 另一个`username.gitgub.io` 源就作 Pages repo. 此方案的好处是可以开设多个项目 pages.
+  * 建立 `username.github.io` 源，并开设 `blog` 分支，将此分支作为 Dev repo. 而 `master` 分支就是 Pages repo. 这样的好处是只用维护一个 repository.
+  * 另一种方案，建立两个 repositories, 一个作为 Dev repo, 另一个`username.github.io` 源就作 Pages repo. 此方案的好处是可以开设多个项目 pages.
 
   本文采用前一种方案，后续的步骤及代码都针对此方案进行。  
-  其实两种方案实现方案基本相同，用第二种方案的小伙伴注意配置正确 Pages repo 的 push 路径和权限即可。
+  其实两种方案实现代码基本相同，用第二种方案的小伙伴注意最后配置正确 Pages repo 的 push 路径和权限即可。
 
 2. Dev repo - sync -> Travis CI  
   在 Travis CI 中开启 Dev repo 的同步开关，然后在 Dev repo 中添加 `.travis.yml` 文件。这样 Travis CI 就能自动同步之后 push 的代码了。
@@ -73,19 +74,19 @@ Travis CI 自动构建 Hexo 的工作流的构思是：
 ## 目标
 ---
 
-看到有调查说，互联网用户在单个页面的平均停留时间不到 20 秒钟。  
-我觉得 20 秒都已经是乐观估计。“太长不看”已经大众现象。  
+看到有调查，互联网用户在单个页面的平均停留时间不到 20 秒钟。  
+我觉得 20 秒都已经是乐观估计。“太长不看”才是主流。  
 前文 Blahblah 写了这么多，不知道还有没有人能看到这里。
 
 最近工作和生活遇到的一些事情，让我萌生这样一个想法——做正确的事情，大多比努力做事更有效。  
 那什么才是做正确的事，或者说如何在合适的时间做合适的事？
 
 这是个问题。  
-问题很难回答，但系统的、科学的思维模式将帮助我们离答案近一点。
+问题很难直接回答，但系统的、科学的思维模式将帮助我们离答案近一点。
 
 本文着重记录了持续集成的模式，与工作流的规划。  
 希望这些系统性的模式能对坚持看到这里的小伙伴有所帮助，那再好不过了。
 
 顺便推荐下前一篇文章里提到的， Coursera 的招牌课程之一—— Michigan 大学的 [Model Thinking 模型思维](http://v2cc.github.io/2015/08/20/course-notes-of-model-thinking/)。深入浅出的讲解了众多优秀的模型及其应用。涉及社会心理学、统计学等多个学科，但又对各科专业知识要求不高。总之就是非常涨姿势。
 
-扯太远了，实现过程请参看下一章：[Travis CI 自动化构建 Hexo (二)](http://v2cc.github.io/2015/09/02/unbelievable-workflow-autodeploy-hexo-by-travis-2/)。
+扯太远了，实现代码请参看下一篇：[Travis CI 自动化构建 Hexo (二)](http://v2cc.github.io/2015/09/02/unbelievable-workflow-autodeploy-hexo-by-travis-2/)。
