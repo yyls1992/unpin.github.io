@@ -51,7 +51,8 @@ sidebar:
         #     class: st-search-show-outputs
         about:
             title: global.about
-            url: /#about
+            # `url: /#about` will pop up about window
+            url: /about
             icon: question
     author_links:
         github:
@@ -93,11 +94,11 @@ sidebar:
 # The link at the right of the header is customizable
 # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
 # DON'T edit `header`, `right_link`, `url`, `icon` and `class` variable name
-header:
-    right_link:
-         url: /#search
-         icon: search
-         class: st-search-show-outputs
+# header:
+#     right_link:
+#          url: /#search
+#          icon: search
+#          class: st-search-show-outputs
 
 
 # Author
@@ -110,7 +111,7 @@ author:
     # Overwritten by your gravatar image if `gravatar_image` is enabled
     picture: orange_logo.png
     # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter:
+    twitter: stevontwt
     # Your google plus profile id. E.g : `+Tranquilpeak` or `123812884128439`
     google_plus:
 
