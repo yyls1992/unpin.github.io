@@ -21,9 +21,13 @@ install:
 - npm install hexo-cli -g
 - npm install
 - npm install hexo-generator-feed --save
+- npm install hexo-generator-sitemap --save
 - npm install hexo-deployer-git --save
 
 script:
 - hexo clean
 - hexo g
 - hexo d
+
+notifications:
+  slack: v2cc:7K6gf8oAbwBbUImwQigMMrmF

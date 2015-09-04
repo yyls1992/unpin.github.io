@@ -67,16 +67,21 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: tranquilpeak
 
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repository: git@github.com:v2cc/v2cc.github.io.git
-  branch: master
-
 # Feed
 ## path: Feed path (Default: atom.xml/rss2.xml)
 feed:
   type: atom
   path: atom.xml
   limit: 20
+
+#Sitemap
+## path: Sitemap path (Default: sitemap.xml)
+sitemap:
+  path: sitemap.xml
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: git@github.com:v2cc/v2cc.github.io.git
+  branch: master
