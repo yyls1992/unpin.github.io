@@ -111,7 +111,7 @@ author:
     # Overwritten by your gravatar image if `gravatar_image` is enabled
     picture: orange_logo.png
     # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter: stevontwt
+    twitter:
     # Your google plus profile id. E.g : `+Tranquilpeak` or `123812884128439`
     google_plus:
 

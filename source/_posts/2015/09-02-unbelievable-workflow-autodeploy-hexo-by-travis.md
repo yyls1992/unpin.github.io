@@ -57,7 +57,7 @@ Travis CI 自动构建 Hexo 的工作流的构思是：
   这里再分解为 build 和 push 两步：
 
   * build  
-  Travis CI 的自动化构建完全依靠唯一的 `.travis.yml` 脚本文件。需要在此文件中添加构建环境、构建 Hexo、生成博客及后续 push 到 Pages repo 的全部脚本。熟悉 Docker 的同学有没有联想到 `makefile`？
+  Travis CI 的自动化构建完全依靠唯一的 `.travis.yml` 脚本文件。需要在此文件中添加构建环境、构建 Hexo、生成博客及后续 push 到 Pages repo 的全部脚本。熟悉 Docker 的同学有没有联想到 `dockerfile`？
 
   * push  
   这一步是最麻烦的。要做到 Travis CI 向 Pages repo 自动推送就必须用到 Github SSH Key. 但是如果直接放置 SSH 私钥在 Dev repo 中，等于向所有人开放了代码仓库的提交权限！  

@@ -1,6 +1,18 @@
 # How to use it
 
-## Requirements
+## Pull docker images
+
+**Recommented:**
+
+A docker image has been created, you can debug and deploy this repo by it.
+
+[emtting/hexo](https://hub.docker.com/r/emitting/hexo/)
+
+	docker pull emitting/hexo
+
+## Build it on your local
+
+### Requirements
 
 1. Node : v0.10.35 or later
 
@@ -21,13 +33,14 @@ install nodejs and use it:
 
 	npm install hexo-cli -g
 
-## Install and deploy blog
+### Install and deploy blog
 
 install dependencies:
 
 	cd <folder>
 	npm install
 	npm install hexo-generator-feed --save
+	npm install hexo-generator-sitemap --save
 	npm install hexo-deployer-git --save
 
 view on the local host:
