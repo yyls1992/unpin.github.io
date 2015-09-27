@@ -19,16 +19,17 @@ I will share my experience on passing each stage. Hope it works for you.
 *	[Wiki](#Wiki)
 *	[Server Side Install](#Server Side Install)
 *	[Configure and start the service](#Configure and start the service)
-*	[Optional: Optimizing Shadowsocks](#Optional: Optimizing Shadowsocks)
+*	[Optional: chacha20 encryption](#Optional: chacha20 encryption)
+*	[Optional: Optimizing shadowsocks](#Optional: Optimizing shadowsocks)
 *	[Optional: Optional: Zeta-TCP](#Optional: Optional: Zeta-TCP)
-*	[Clients on Windows](#Clients on Windows)
+*	[Clients on windows](#Clients on windows)
 
 ## Wiki
 ---
 
-A foreign server is required firstly.  I choosed a VPS which region of DigitalOcean server is San Francisco.  
+A foreign server is required firstly.  I choosed a VPS which DigitalOcean server is located at San Francisco.  
 Recommended VPS:  
-[DigitalOcean](https://www.digitalocean.com/?refcode=4cac58a4d0a0) Provide cloud hosting in the US and Singapore, Low-cost, Default Support for TCP Hybla, take Paypal.  
+[DigitalOcean](https://www.digitalocean.com/?refcode=4cac58a4d0a0) Provide cloud hosting in the US and Singapore. Default Support for TCP Hybla. Low-cost, take Paypal.  
 [Linode](https://www.linode.com/) Provide cloud hosting in Japan and the US, High Bandwidth
 
 **Shadowsocks-libev** is a lightweight secured socks5 proxy for embedded devices and low end boxes.  
@@ -106,7 +107,39 @@ Make sure if `shadowsocks-libev` is listening to the correct port:
 
 	netstat -lnp
 
-## Optional: Optimizing Shadowsocks
+## Optional: chacha20 encryption
+---
+
+Modify `"method":"aes-256-cfb"` to `"method":"chacha20"` and save, like this:
+
+```
+{  
+     "server":"0.0.0.0",
+     "server_port":443,
+     "password":"password",
+     "method":"chacha20",
+     "timeout":300
+}
+```
+
+Install required libs:
+
+```bash
+wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
+
+tar zxf LATEST.tar.gz 
+cd libsodium*
+./configure
+make && make install
+```
+
+Optimizing encryption  speed:
+
+    apt-get install python-m2crypto
+
+Reboot shadowsocks service.
+
+## Optional: Optimizing shadowsocks
 ---
 
 ###	Debian & Ubuntu
@@ -205,7 +238,7 @@ Restart service
 	/serverspeeder/bin/serverSpeeder.sh stop
 	/serverspeeder/bin/serverSpeeder.sh start
 
-## Clients on Windows
+## Clients on windows
 ---
 
 Cow: [X32](http://dl.chenyufei.info/cow/cow-win32-0.9.4.zip),[X64](http://dl.chenyufei.info/cow/cow-win64-0.9.4.zip)
