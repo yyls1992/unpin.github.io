@@ -86,9 +86,9 @@ sudo apt-get update
 sudo apt-get install spotify-client
 ```
 
-* Zeal
+* ~~Zeal~~
 
-Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.
+~~Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.~~
 
 ```bash
 sudo add-apt-repository ppa:zeal-developers/ppa
@@ -111,9 +111,9 @@ sudo apt-get install curl
 curl -L git.io/cow | bash
 ```
 
-* indicator-netspeed-unity
+* ~~indicator-netspeed-unity~~
 
-用于在状态栏显示实时流量的插件。
+~~用于在状态栏显示实时流量的插件。~~
 
 ```bash
 sudo add-apt-repository ppa:fixnix/netspeed
@@ -121,7 +121,7 @@ sudo apt-get update
 sudo apt-get install indicator-netspeed-unity
 ```
 
-* Caffeine
+* ~~Caffeine~~
 
 ```bash
 sudo add-apt-repository ppa:caffeine-developers/ppa
@@ -129,9 +129,9 @@ sudo apt-get update
 sudo apt-get install caffeine
 ```
 
-* F.lux
+* ~~F.lux~~
 
-一个 ‘Keeps Your Eyes Sharp’ 的小工具，通过调节屏幕色温适应各个时间段的光照亮度来保护眼睛。有 Windows 、 MAC 及 Linux 版本，开发者诚意十足。
+~~一个 ‘Keeps Your Eyes Sharp’ 的小工具，通过调节屏幕色温适应各个时间段的光照亮度来保护眼睛。有 Windows 、 MAC 及 Linux 版本，开发者诚意十足。~~
 
 ```bash
 sudo add-apt-repository ppa:kilian/f.lux
@@ -152,7 +152,7 @@ Ambiance & Radiance Flat is a Modern, Beautiful and Vivid Re-imagination of the 
 
 一款 Python 语言的程序，用于分析 sshd 的日志文件。防止 SSH 被暴力扫描破解。
 
-* FileZilla, Wireshark, Unity Tweak Tool, Supervisor
+* System Monitor Indicator, FileZilla, Wireshark, Unity Tweak Tool, Supervisor
 
 *Software Center*
 
