@@ -1,5 +1,5 @@
 ---
-title: 改善 Windows 平台 Source Code Pro 等编程字体时的中文显示效果
+title: 改善 Windows 上 Source Code Pro 等编程字体的中文显示效果
 date: 2015-10-25 09:43:00
 categories:
 - tool
