@@ -21,7 +21,7 @@ Sublime Text 在 Windows 系统上默认英文字体是 Consolas，默认中文�
 网上比较常见的这款 "YaHei Consolas Hybrid.ttf" 字体就是 2012 年左右整合的，到今天这段时间，微软其实早已更新了雅黑字体的版本，来适应 Win10 等新系统的需要。
 
 那么问题来了。
-有没有办法在使用原生字体的基础上，实现任意混合中英文的显示效果呢？
+有没有办法在使用原生字体的基础上，实现任意混合两款中英文字体的效果呢？
 
 ### 字体链接（FontLink）
 
@@ -34,7 +34,7 @@ Sublime Text 在 Windows 系统上默认英文字体是 Consolas，默认中文�
 *   与中文字型观感上无冲突
 *   无衬线（无衬线字体更加现代，也能与移动设备上的培养起来的字体观感习惯保持一致）
 
-这里我们可以非常流行 Source Code Pro 作为英文字体。中文有「微软雅黑（Microsoft YaHei）」和「思源黑体（Source Han Sans / Noto Sans CJK）」两个不错的选择。以雅黑为例。
+这里我们以非常流行 Source Code Pro 作为英文字体。中文有「微软雅黑（Microsoft YaHei）」和「思源黑体（Source Han Sans / Noto Sans CJK）」两个不错的选择。以雅黑为例。
 
 注册表进入
 
@@ -54,7 +54,7 @@ Sublime Text 在 Windows 系统上默认英文字体是 Consolas，默认中文�
 
 第二行重复的 "MSYH.TTF" 是为了使 GDI+ 能够识别该字体，第一行则是 GDI 调用。完成后重启系统生效。
 
-在 Sublime Text 个人配置文件中添加 `"font_face":"微软雅黑"` 即可。
+在 Sublime Text 个人配置文件中添加 `"font_face":"Source Code Pro"` 即可。
 
 最后附上效果图，已及部分引用。
 
