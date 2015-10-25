@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Emitting - Keep calm and write code
+title: Emitting
 subtitle:
-description:
+description: The Introvert's Guide to Learning and Sharing
 author: Steve ZHANG
-language: 
+language:
 - zh-CN
 - en
 timezone: Asia/Shanghai

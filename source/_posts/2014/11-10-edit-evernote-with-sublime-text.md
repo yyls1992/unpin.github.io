@@ -1,5 +1,5 @@
 ---
-title: Sublime Text 3 采用 Markdown 格式编辑 Evernote（印象笔记）
+title: Sublime Text 3 中使用 Markdown 格式编辑 Evernote（印象笔记）
 date: 2014-11-10 20:10:33
 categories:
 - tools
