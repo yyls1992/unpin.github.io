@@ -7,6 +7,10 @@ categories:
 
 ---
 
+更新：
+添加了新的软件，也删除了一些废弃的软件。  
+**2015/10/28**
+
 整理了下 Ubuntu 常用软件，备忘。
 
 ## Productivity
@@ -75,9 +79,9 @@ sudo apt-get install oracle-java8-set-default
 
 ## Watch and play
 
-* Spotify
+* ~~Spotify~~
 
-体验非常优秀的音乐社交平台，有了它再也不用发愁音乐的同步问题啦。而且居然广告都能被设计的令人想看了再看！强烈推荐。
+~~体验非常优秀的音乐社交平台，有了它再也不用发愁音乐的同步问题啦。而且居然广告都能被设计的令人想看了再看！强烈推荐。~~
 
 ```bash
 sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
@@ -85,10 +89,13 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 sudo apt-get update
 sudo apt-get install spotify-client
 ```
+* [Rescue Time](https://www.rescuetime.com/get_rescuetime)
 
-* ~~Zeal~~
+A personal analytics service that shows you how you spend your time and provides tools to help you be more productive.
 
-~~Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.~~
+* Zeal
+
+Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.
 
 ```bash
 sudo add-apt-repository ppa:zeal-developers/ppa
@@ -96,7 +103,7 @@ sudo apt-get update
 sudo apt-get install zeal
 ```
 
-* Calibre, VLC, GIMP, OpenShot, Kazam, Stellarium
+* Steam, Calibre, VLC, GIMP, OpenShot, Kazam, Stellarium
 
 *Software Center*
 
@@ -147,6 +154,14 @@ sudo apt-get install fluxgui
 * [Theme - Ambiance & Radiance Flat Colors](http://gnome-look.org/content/show.php/Ambiance+%26+Radiance+Flat+Colors?content=168155)
 
 Ambiance & Radiance Flat is a Modern, Beautiful and Vivid Re-imagination of the Ambiance & Radiance Color GTK 2/3 Themes. It features a Modern, Clean And "Flat" look in your choice of 13 vibrant colors. A theme For Ubuntu, Mint Or any Distro and nearly any GTK Desktop.
+
+```bash
+sudo add-apt-repository ppa:ravefinity-project/ppa
+sudo apt-get update
+sudo apt-get install ambiance-flat-colors
+Or
+sudo apt-get install radiance-flat-colors
+```
 
 * Denyhosts
 
