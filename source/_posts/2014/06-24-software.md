@@ -1,13 +1,13 @@
 ---
-title: Ubuntu 软件精选
+title: Ubuntu 软件工厂
 date: 2014-06-24 20:10:33
-updated: 2015-10-29 10:58:00
+updated: 2015-11-07 10:58:00
 categories:
 - tools
 
 ---
 
-**Oct 28, 2015  V2.0**  
+**Nov 7, 2015  V2.0**  
 添加了新的软件，也删除了一些废弃的软件。  
 
 
@@ -15,7 +15,7 @@ categories:
 
 ## Productivity
 
-* 	[Chrome](https://www.google.com/chrome/browser/desktop/) 
+* 	[Chrome](https://www.google.com/chrome/browser/desktop/)
 
 	PC， 手机默认浏览器都是 Chrome。如果网络条件能好一点，甚至系统都想用 Chrome OS。
 
@@ -32,24 +32,26 @@ categories:
 
 	2. 	`mv android-studio /opt` moves the files you unpacked (requires permissions)
 
-	3. 	`gedit android-studio.desktop` this opens a text editor so that we may create a shortcut icon to open your new program. Insert the following code, then save the .desktop file.
+	3. 	`vi android-studio.desktop` this opens a text editor so that we may create a shortcut icon to open your new program. Insert the following code, then save the .desktop file.
 
 		```
 		[Desktop Entry]
-		 Name=Android-Studio
-		 Comment=your comments
-		 Exec=/opt/android-studio/bin/studio.sh
-		 Icon=/opt/android-studio/bin/idea.png
-		 Terminal=false
-		 Type=Application
-		 Categories=Utility;IDE;Development;
-		 ```
+		Name=Android Studio
+		Comment=Be nice!
+		Exec=/opt/android-studio/bin/studio.sh
+		Icon=/opt/android-studio/bin/studio.png
+		Terminal=false
+		Type=Application
+		Categories=Utility;IDE;Development;
+		```
 
 	4. 	To finish up, `desktop-file-install android-studio.desktop`.
 
 * 	[Genymotion](https://www.genymotion.com/#!/download)
 
 	可能是最快的虚拟机，Android 开发必备。
+
+		sudo ./genymotion-* -d /opt/
 
 * 	Sublime Text 3 & 中文输入补丁
 
@@ -69,41 +71,51 @@ categories:
 	sudo apt-get install oracle-java8-set-default
 	```
 
-* 	[Smartgit](http://www.syntevo.com/smartgit/)
+* 	[Docker](http://docs.docker.com/linux/started/)
 
-	图形化的 Git 客户端，个人 License 免费。
+	An open platform for distributed applications for developers and sysadmins. Get the latest Docker package.
 
-* 	[CopyQ](https://github.com/hluk/CopyQ/releases)
+		wget -qO- https://get.docker.com/ | sh
 
-	一个剪贴板管理工具。
+*	[Oh my Zsh](http://ohmyz.sh/)
 
-* 	[搜狗输入法](http://pinyin.sogou.com/linux/?r=pinyin)，GoldenDict
+	Oh-My-Zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and a few things that make you shout.
+
+		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+* 	Fcitx-Rime, Git-cola, Diodon, GVim, GoldenDict, Guake
 
 ## Multimedia
 
-*	~~Spotify~~
+*	[NetEase-MusicBox](https://github.com/darknessomi/musicbox)
 
-	~~体验非常优秀的音乐社交平台，有了它再也不用发愁音乐的同步问题啦。而且居然广告都能被设计的令人想看了再看！强烈推荐。~~
+	一款 CLI 网易云音乐播放器，简洁优雅，基于Python编写。
 
-	```bash
-	sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
-	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-	sudo apt-get update
-	sudo apt-get install spotify-client
+	Linux安装
+
+		sudo apt-get install mpg123 
+		sudo pip install NetEase-MusicBox  
+
+	可选功能依赖 && 配置文件
+
+	*	aria2 用于缓存歌曲
+	*	python-keybinder 用于支持全局快捷键
+	*	libnotify-bin 用于支持消息提示
+
+	配置文件地址: ~/.netease-musicbox  
+	由于歌曲 API 只接受中国大陆地区访问，港澳台及海外用户请自行在config.json中设置代理
+
 	```
+	"mpg123_parameters": {
+	    "default": [], 
+	    "describe": "The additional parameters when mpg123 start.", 
+	    "value": ["-p", "http://ip:port"]
+	}
+	```
+
 * 	[Rescue Time](https://www.rescuetime.com/get_rescuetime)
 
 	A personal analytics service that shows you how you spend your time and provides tools to help you be more productive.
-
-* 	Zeal
-
-	Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.
-
-	```bash
-	sudo add-apt-repository ppa:zeal-developers/ppa
-	sudo apt-get update
-	sudo apt-get install zeal
-	```
 
 *	Ambient Noise
 
@@ -116,7 +128,28 @@ categories:
 	sudo apt-get install anoise-community-extension1
 	```
 
-* 	Steam, Calibre, VLC, GIMP, OpenShot, Kazam, Stellarium
+* 	~~Zeal~~
+
+	~~Zeal is an offline documentation browser inspired by Dash, available for Linux and Windows.~~
+
+	```bash
+	sudo add-apt-repository ppa:zeal-developers/ppa
+	sudo apt-get update
+	sudo apt-get install zeal
+	```
+
+*	~~Spotify~~
+
+	~~体验非常优秀的音乐社交平台，有了它再也不用发愁音乐的同步问题啦。而且居然广告都能被设计的令人想看了再看！强烈推荐。~~
+
+	```bash
+	sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+	sudo apt-get update
+	sudo apt-get install spotify-client
+	```
+
+* 	Vocal, Calibre, GIMP, Comix, Inkscape, VLC, Stellarium, Steam
 
 ## System tools
 
@@ -128,10 +161,27 @@ categories:
 	sudo apt-get install curl
 	curl -L git.io/cow | bash
 	```
+*	[Proxychains-ng](https://github.com/rofl0r/proxychains-ng)
 
-* 	~~indicator-netspeed-unity~~
+	A tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy. Supported auth-types: "user/pass" for SOCKS4/5, "basic" for HTTP.
 
-	~~用于在状态栏显示实时流量的插件。~~
+	# needs a working C compiler, preferably gcc
+  		./configure --prefix=/usr --sysconfdir=/etc
+  	make
+  		[optional] sudo make install
+  		[optional] sudo make install-config (installs proxychains.conf)
+
+  	编辑proxychains配置
+		vim src/proxychains.conf
+
+	将socks4 127.0.0.1 9095改为你自己的配置  
+
+  	if you dont install, you can use proxychains from the build directory, like this:
+  		./proxychains4 -f src/proxychains.conf telnet google.com 80
+
+* 	indicator-netspeed-unity
+
+	用于在状态栏显示实时流量的插件。
 
 	```bash
 	sudo add-apt-repository ppa:fixnix/netspeed
@@ -139,12 +189,23 @@ categories:
 	sudo apt-get install indicator-netspeed-unity
 	```
 
-* 	~~Caffeine~~
+* 	VirtualBox
+
+	良好的多平台支持，加上较小的体积，推荐。另需要 USB 等支持的话必须添加用户组，`gedit /etc/group`，然后添加自己用户名 `vboxusers:x:126:steve`.
+
+*	[Arc Theme](https://github.com/horst3180/Arc-theme)
+
+	Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell. It supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+
+
+* 	~~[Theme - Ambiance & Radiance Flat Colors](http://gnome-look.org/content/show.php/Ambiance+%26+Radiance+Flat+Colors?content=168155)~~
+
+	Ambiance & Radiance Flat is a Modern, Beautiful and Vivid Re-imagination of the Ambiance & Radiance Color GTK 2/3 Themes. It features a Modern, Clean And "Flat" look in your choice of 13 vibrant colors. A theme For Ubuntu, Mint Or any Distro and nearly any GTK Desktop.
 
 	```bash
-	sudo add-apt-repository ppa:caffeine-developers/ppa
+	sudo add-apt-repository ppa:ravefinity-project/ppa
 	sudo apt-get update
-	sudo apt-get install caffeine
+	sudo apt-get install ambiance-flat-colors
 	```
 
 * 	~~F.lux~~
@@ -157,26 +218,12 @@ categories:
 	sudo apt-get install fluxgui
 	```
 
-* 	VirtualBox
-  
-	良好的多平台支持，加上较小的体积，推荐。另需要 USB 等支持的话必须添加用户组，`gedit /etc/group`，然后添加自己用户名 `vboxusers:x:126:steve`.
-
-* 	[Theme - Ambiance & Radiance Flat Colors](http://gnome-look.org/content/show.php/Ambiance+%26+Radiance+Flat+Colors?content=168155)
-
-	Ambiance & Radiance Flat is a Modern, Beautiful and Vivid Re-imagination of the Ambiance & Radiance Color GTK 2/3 Themes. It features a Modern, Clean And "Flat" look in your choice of 13 vibrant colors. A theme For Ubuntu, Mint Or any Distro and nearly any GTK Desktop.
-
-	```bash
-	sudo add-apt-repository ppa:ravefinity-project/ppa
-	sudo apt-get update
-	sudo apt-get install ambiance-flat-colors
-	Or
-	sudo apt-get install radiance-flat-colors
-	```
-
-* 	Denyhosts
+* 	~~Denyhosts~~
 
 	一款 Python 语言的程序，用于分析 sshd 的日志文件。防止 SSH 被暴力扫描破解。
 
-* 	System Monitor Indicator, FileZilla, Wireshark, Unity Tweak Tool, Supervisor
+* 	Caffeine, Uget, FileZilla, Unity Tweak Tool, Supervisor
+
+*	fonts-noto-cjk, android-tools-adb, python-pip, 7zip
 
 Done.

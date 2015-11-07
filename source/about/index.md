@@ -12,8 +12,10 @@ comments: false
 跟着感觉走了很久，大脑估计都要生锈。  
 害怕一思考，上帝就发笑。
 
-### About Emitting
+### About Wribot
 
+Wribot，大概就是疯狂写字的机器人这个意思。  
+博客折腾了很多个版本，其实最开始叫做 Emitting 。  
 Emit, 发出，吐露。  
 如果写上一百年，应该也能有自己态度。
 
@@ -22,4 +24,4 @@ Emit, 发出，吐露。
 
 ### About This Site
 
-Emitting is a [Github pages](https://pages.github.com/) blog based on the [Hexo framework](https://hexo.io/) with [Tranquilpeak](https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme) theme.
+Wribot is a [Github pages](https://pages.github.com/) blog based on the [Hexo framework](https://hexo.io/) with [Tranquilpeak](https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme) theme.
