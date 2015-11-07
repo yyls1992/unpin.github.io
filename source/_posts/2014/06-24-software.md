@@ -34,24 +34,25 @@ categories:
 
 	3. 	`vi android-studio.desktop` this opens a text editor so that we may create a shortcut icon to open your new program. Insert the following code, then save the .desktop file.
 
-		```
-		[Desktop Entry]
-		Name=Android Studio
-		Comment=Be nice!
-		Exec=/opt/android-studio/bin/studio.sh
-		Icon=/opt/android-studio/bin/studio.png
-		Terminal=false
-		Type=Application
-		Categories=Utility;IDE;Development;
-		```
+	```
+	[Desktop Entry]
+	Name=Android Studio
+	Comment=The best IDE you can get!
+	Exec=/opt/android-studio/bin/studio.sh
+	Icon=/opt/android-studio/bin/studio.png
+	Terminal=false
+	Type=Application
+	Categories=IDE;Development;
+	```
 
 	4. 	To finish up, `desktop-file-install android-studio.desktop`.
 
 * 	[Genymotion](https://www.genymotion.com/#!/download)
 
 	可能是最快的虚拟机，Android 开发必备。
-
-		sudo ./genymotion-* -d /opt/
+	```
+	sudo ./genymotion-* -d /opt/
+	```
 
 * 	Sublime Text 3 & 中文输入补丁
 
@@ -74,14 +75,16 @@ categories:
 * 	[Docker](http://docs.docker.com/linux/started/)
 
 	An open platform for distributed applications for developers and sysadmins. Get the latest Docker package.
-
-		wget -qO- https://get.docker.com/ | sh
+	```
+	wget -qO- https://get.docker.com/ | sh
+	```
 
 *	[Oh my Zsh](http://ohmyz.sh/)
 
 	Oh-My-Zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and a few things that make you shout.
-
-		sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
 
 * 	Fcitx-Rime, Git-cola, Diodon, GVim, GoldenDict, Guake
 
@@ -92,9 +95,10 @@ categories:
 	一款 CLI 网易云音乐播放器，简洁优雅，基于Python编写。
 
 	Linux安装
-
-		sudo apt-get install mpg123 
-		sudo pip install NetEase-MusicBox  
+	```
+	sudo apt-get install mpg123 
+	sudo pip install NetEase-MusicBox
+	```
 
 	可选功能依赖 && 配置文件
 
@@ -165,19 +169,28 @@ categories:
 
 	A tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy. Supported auth-types: "user/pass" for SOCKS4/5, "basic" for HTTP.
 
-	# needs a working C compiler, preferably gcc
-  		./configure --prefix=/usr --sysconfdir=/etc
+	needs a working C compiler, preferably gcc
+  	```	
+	./configure --prefix=/usr --sysconfdir=/etc
+	```
+
   	make
-  		[optional] sudo make install
-  		[optional] sudo make install-config (installs proxychains.conf)
+  	```
+	[optional] sudo make install
+	[optional] sudo make install-config (installs proxychains.conf)
+	```
 
   	编辑proxychains配置
-		vim src/proxychains.conf
+  	```
+	vim src/proxychains.conf
+	```
 
 	将socks4 127.0.0.1 9095改为你自己的配置  
 
   	if you dont install, you can use proxychains from the build directory, like this:
-  		./proxychains4 -f src/proxychains.conf telnet google.com 80
+  	```
+  	./proxychains4 -f src/proxychains.conf telnet google.com 80
+  	```
 
 * 	indicator-netspeed-unity
 
