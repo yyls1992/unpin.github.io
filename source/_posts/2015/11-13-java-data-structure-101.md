@@ -1,7 +1,11 @@
 ---
 title: Java 数据结构 101
-notebook: Inbox
-tags:#Todo, cs
+notebodate: 2015-11-13 12:00:00
+categories:
+- flow
+tags:
+- java
+- data structure
 ---
 
 ## 原始类型及对象封装类
