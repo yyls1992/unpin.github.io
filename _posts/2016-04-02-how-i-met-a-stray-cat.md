@@ -9,7 +9,7 @@ tags:
 ---
 
 Charger is a stray cat.
-![it's not Charger](http://v2cc.github.io/assets/image/how-i-met-a-stray-cat/dont-panic.png)
+![it's not Charger](/img/how-i-met-a-stray-cat/dont-panic.png)
 
 Charger 很小的时候跟着它的母亲与兄弟一起跑进的我们家的院子。它们三个被姥姥拿着扫把追了很多次，但不知看上了什么，从此定居在这里。  
 老家有个说法，狗招财猫招灾，所以遇到流浪猫就撵走。姥姥是个很传统的老人，居然还是收留了 Charger 一家。
