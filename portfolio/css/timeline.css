@@ -26,12 +26,12 @@ body, html {
 }
 
 @font-face {
-	font-family: 'huxico';
-	src:url('../fonts/huxico.eot');
-	src:url('../fonts/huxico.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/huxico.woff') format('woff'),
-		url('../fonts/huxico.ttf') format('truetype'),
-		url('../fonts/huxico.svg#huxico') format('svg');
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#huxico') format('svg');
 	font-weight: normal;
 	font-style: normal;
 } /* Made with http://icomoon.io/ */
@@ -114,38 +114,24 @@ body, html {
 	margin: 0 0 0 -25px;
 }
 
-.cbp_tmicon-phone:before {
-	content: "\e004";
-	font-family: 'huxico';
+.cbp_tmicon-mobile:before {
+	content: "\e901";
+	font-family: 'icomoon';
 }
 
-.cbp_tmicon-screen:before {
-	content: "\e005";
-	font-family: 'huxico';
+.cbp_tmicon-laptop:before {
+	content: "\e900";
+	font-family: 'icomoon';
 }
 
-.cbp_tmicon-html:before {
-	content: "\e001";
-	font-family: 'huxico';
+.cbp_tmicon-android:before {
+	content: "\e902";
+	font-family: 'icomoon';
 }
 
-.cbp_tmicon-video:before {
-	content: "\e002";
-	font-family: 'huxico';
-}
-
-.cbp_tmicon-font:before {
-	content: "\e003";
-	font-family: 'huxico';
-}
-
-.cbp_tmicon-vue:before {
-	content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url("../images/vue-logo.png") 50% 50% no-repeat;
-    background-size: 20px;
+.cbp_tmicon-git:before {
+	content: "\e903";
+	font-family: 'icomoon';
 }
 
 /******* Hux Branch *****/
