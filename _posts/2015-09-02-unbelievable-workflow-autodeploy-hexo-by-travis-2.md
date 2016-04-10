@@ -79,7 +79,7 @@ tags:
 
   下面对 `.travis.yml` 文件各块添加了注释。有几个地方必须要修改：  
   两处 `xxxxxxxxxx` 修改为你之前获得的解密参数；`你的姓名` 和 `你的邮箱` 最好与你 Github 上的信息保持一致。  
-  同时附上本博客的 `.travis.yml` 源文件，以供下载：[.travis.yml](https://raw.githubusercontent.com/v2cc/v2cc.github.io/blog/.travis.yml).
+  同时附上本博客的 `.travis.yml` 源文件，以供下载：[.travis.yml](https://gist.github.com/uhy/128f703754effe6367d97daf8fce0184).
 
   ```bash
   # 指定环境

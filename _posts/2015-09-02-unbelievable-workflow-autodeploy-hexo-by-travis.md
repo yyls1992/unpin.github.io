@@ -88,6 +88,6 @@ Travis CI 自动构建 Hexo 的工作流的构思是：
 本文着重记录了持续集成的模式，与工作流的规划。  
 希望这些系统性的模式能对坚持看到这里的小伙伴有所帮助，那再好不过了。
 
-顺便推荐下前一篇文章里提到的， Coursera 的招牌课程之一—— Michigan 大学的 [Model Thinking 模型思维](http://v2cc.github.io/2015/08/20/course-notes-of-model-thinking/)。深入浅出的讲解了众多优秀的模型及其应用。涉及社会心理学、统计学等多个学科，但又对各科专业知识要求不高。总之就是非常涨姿势。
+顺便推荐下前一篇文章里提到的， Coursera 的招牌课程之一—— Michigan 大学的 [Model Thinking 模型思维](http://uhy.github.io/2015/08/20/course-notes-of-model-thinking/)。深入浅出的讲解了众多优秀的模型及其应用。涉及社会心理学、统计学等多个学科，但又对各科专业知识要求不高。总之就是非常涨姿势。
 
-扯太远了，实现代码请参看下一篇：[Travis CI 自动化构建 Hexo (二)](http://v2cc.github.io/2015/09/03/unbelievable-workflow-autodeploy-hexo-by-travis-2/)。
+扯太远了，实现代码请参看下一篇：[Travis CI 自动化构建 Hexo (二)](http://uhy.github.io/2015/09/03/unbelievable-workflow-autodeploy-hexo-by-travis-2/)。
