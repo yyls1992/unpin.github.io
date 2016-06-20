@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: stevzhg+blog@gmail.com
 description: "Android 开发，Python 爱好者，手艺人 | Python Lover, Mobile Dev Engineer | 这里是 @stevzhg 的个人博客，与你一起发现更大的世界。"
 keyword: "Steve Zhang, Uhy, Android, 移动开发， @stevzhg, Steve的博客, Blog, 博客, 个人网站, 互联网"
-url: "http://uhy.github.io"              # your host, for absolute URL
+url: "https://uhy.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 timezone: CN
 
